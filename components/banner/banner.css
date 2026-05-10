@@ -1,0 +1,242 @@
+/* ========================================
+   RESPONSIVE STICKY TOP BANNER
+======================================== */
+
+.sticky-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sticky-banner.hidden {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 56px;
+}
+
+/* MAIN */
+.sticky-banner__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  width: 100%;
+  min-height: 56px;
+  padding: 0.75rem 4rem 0.75rem 1.25rem;
+
+  background: linear-gradient(180deg, #1d4ed8 0%, #1d22c2 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 24px rgba(29,34,194,0.25);
+  color: white;
+  overflow: hidden;
+}
+
+.sticky-banner__content::before,
+.sticky-banner__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sticky-banner__content::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.12), transparent);
+}
+
+.sticky-banner__content::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0.12), transparent);
+}
+
+.sticky-banner__badge,
+.sticky-banner__text,
+.sticky-banner__separator,
+.sticky-banner__link {
+  position: relative;
+  z-index: 1;
+}
+
+/* BADGE */
+.sticky-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sticky-banner__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 8px rgba(255,255,255,0.8);
+  animation: bannerPulse 2s ease-in-out infinite;
+}
+
+@keyframes bannerPulse {
+  0%,100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* TEXT */
+.sticky-banner__text {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.sticky-banner__text strong {
+  font-weight: 700;
+}
+
+.sticky-banner__separator {
+  color: rgba(255,255,255,0.35);
+  font-size: 0.7rem;
+}
+
+/* CTA */
+.sticky-banner__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: gap 0.2s ease;
+}
+
+.sticky-banner__link:hover {
+  gap: 0.4rem;
+}
+
+.sticky-banner__arrow {
+  transition: transform 0.2s ease;
+}
+
+.sticky-banner__link:hover .sticky-banner__arrow {
+  transform: translateX(2px);
+}
+
+/* CLOSE */
+.sticky-banner__close {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  body {
+    padding-top: 56px;
+  }
+
+  .sticky-banner__text,
+  .sticky-banner__link {
+    font-size: 0.8rem;
+  }
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+
+  .sticky-banner__content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.85rem 3rem 0.85rem 1rem;
+    min-height: auto;
+    gap: 0.45rem;
+  }
+
+  .sticky-banner__badge {
+    font-size: 0.62rem;
+  }
+
+  .sticky-banner__text {
+    font-size: 0.75rem;
+    text-align: left;
+    max-width: 90%;
+  }
+
+  .sticky-banner__separator {
+    display: none;
+  }
+
+  .sticky-banner__link {
+    font-size: 0.74rem;
+  }
+
+  .sticky-banner__close {
+    top: 0.6rem;
+    right: 0.5rem;
+    transform: none;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  body {
+    padding-top: 130px;
+  }
+
+  .sticky-banner__content {
+    padding: 0.8rem 2.8rem 0.8rem 0.85rem;
+  }
+
+  .sticky-banner__text {
+    font-size: 0.7rem;
+  }
+
+  .sticky-banner__link {
+    font-size: 0.7rem;
+  }
+
+  .sticky-banner__badge {
+    font-size: 0.56rem;
+  }
+}

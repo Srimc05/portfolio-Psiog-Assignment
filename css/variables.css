@@ -1,0 +1,20 @@
+:root {
+  --color-bg: #f3f3f3;
+  --color-text: #000000;
+  --color-muted: #8a8a8a;
+  --color-accent: #1515a8;
+
+  --font-primary: "Inter", "Segoe UI", sans-serif;
+
+  --container-width: 1400px;
+
+  --fs-hero: clamp(3rem, 9vw, 7.5rem);
+  --fs-subtitle: clamp(1.2rem, 2vw, 2.5rem);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --space-section-y: 5rem;
+  --space-section-x: 3rem;
+}

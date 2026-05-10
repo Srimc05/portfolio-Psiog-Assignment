@@ -1,0 +1,671 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sriii Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="components/projects/projects.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="components/banner/banner.css" />
+  <link rel="stylesheet" href="components/hero/hero.css" />
+  <link rel="stylesheet" href="components/gallery/gallery.css" />
+  <link rel="stylesheet" href="components/about/about.css" />
+  <link rel="stylesheet" href="components/footer/footer.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+ 
+<body>
+ 
+<div id="sticky-banner" class="sticky-banner" role="banner" aria-label="Site announcement">
+  <div class="sticky-banner__content">
+    <!-- Badge -->
+    <span class="sticky-banner__badge">
+      
+
+    <!-- Message -->
+    <p class="sticky-banner__text">
+         Client Satisfaction :<strong> 98 % </strong>for Custom Applications  
+    </p>
+
+    <!-- Separator -->
+    <span class="sticky-banner__separator" aria-hidden="true">•</span>
+
+    
+    
+  </div>
+
+  <!-- Close Button -->
+  <button
+    class="sticky-banner__close"
+    id="bannerCloseBtn"
+    aria-label="Dismiss banner"
+  >
+    ×
+  </button>
+</div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="hero__sidebar">
+
+      <div class="sidebar__profile">
+        <img
+          src="https://ik.imagekit.io/sri05/ChatGPT%20Image%20May%2010,%202026,%2008_32_57%20AM.png?updatedAt=1778382219479"
+          alt="Sriii"
+          class="sidebar__image"
+        />
+      </div>
+
+    <nav class="sidebar__nav">
+  <a href="#projects" class="nav-btn">
+    <span class="nav-btn__arrow">→</span>
+    <span class="nav-btn__text">Projects</span>
+  </a>
+
+  <a href="#about" class="nav-btn">
+    <span class="nav-btn__arrow">→</span>
+    <span class="nav-btn__text">About Me</span>
+  </a>
+
+  <a href="#contact" class="nav-btn">
+    <span class="nav-btn__arrow">→</span>
+    <span class="nav-btn__text">Contact Me</span>
+  </a>
+</nav>
+
+      <button class="sidebar__toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="sidebar__nav sidebar__nav--mobile" id="mobileMenu">
+        <a href="#projects" class="sidebar__link">Projects</a>
+        <a href="#about" class="sidebar__link">About Me</a>
+        <a href="#contact" class="sidebar__link">Contact Me</a>
+      </nav>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <div class="hero__content-wrapper">
+      <div class="hero__content">
+
+        <div class="hero__line">
+          <span class="hero__number">01</span>
+          <span class="hero__tag">&lt;</span>
+          <h1 class="hero__title">
+            Hello, I'm <span class="hero__accent">Sriii</span>!
+          </h1>
+          <span class="hero__tag">&gt;</span>
+        </div>
+
+        <div class="hero__line">
+          <span class="hero__number">02</span>
+          <span class="hero__tag">&lt;</span>
+          <h2 class="hero__title">
+            I <span class="hero__accent">design</span> and
+            <span class="hero__accent">develop</span>
+          </h2>
+        </div>
+
+        <div class="hero__line">
+          <span class="hero__number">03</span>
+          <h2 class="hero__title hero__line--offset">web apps.</h2>
+          <span class="hero__tag">&gt;</span>
+        </div>
+
+        <p class="hero__subtitle">
+         I turn ambitious ideas into fast, clean, and scalable web applications.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="about-container">
+
+    <!-- Left Side - Image -->
+    <div class="about-image">
+      <img src="https://ik.imagekit.io/sri05/ChatGPT%20Image%20May%2010,%202026,%2003_14_10%20PM.png?updatedAt=1778406270928" alt="Sriii - Developer">
+    </div>
+
+    <!-- Right Side - Content -->
+    <div class="about-content">
+      <p class="about-label">About Me</p>
+
+      <h2>
+  Turning Ideas into
+  <span>Scalable Products</span>
+  That Create Real Impact
+</h2>
+
+      <p class="about-description">
+        I'm <strong>Sri Sudhan MC</strong>, a passionate Full Stack Developer who loves
+        building products and understanding how they work internally.
+        I focus on creating scalable applications with clean architecture,
+        intuitive user experiences, and maintainable code.
+      </p>
+
+      <p class="about-description">
+        My core expertise includes C#, .NET, JavaScript, HTML, CSS, SQL, React, Tailwind CSS
+        and modern development practices. 
+      </p>
+
+      <!-- Stats -->
+      <div class="about-stats">
+        <div class="stat-card">
+          <h3>10+</h3>
+          <p>Projects Built</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Clean Code Focus</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>∞</h3>
+          <p>Curiosity to Learn</p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="about-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="assets/resume.pdf" class="btn-secondary" target="_blank">
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D GALLERY -->
+<section class="gallery-section">
+<p class="about-label">Hobbies : The Love for my PhotoGraphy</p>
+  <div class="stage">
+    <div class="slider">
+
+      <div class="item" style="--i:1">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500">
+      </div>
+
+      <div class="item" style="--i:2">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500">
+      </div>
+
+      <div class="item" style="--i:3">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500">
+      </div>
+
+      <div class="item" style="--i:4">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500">
+      </div>
+
+      <div class="item" style="--i:5">
+        <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=500">
+      </div>
+
+      <div class="item" style="--i:6">
+        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=500">
+      </div>
+
+      <div class="item" style="--i:7">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500">
+      </div>
+
+      <div class="item" style="--i:8">
+        <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500">
+      </div>
+
+    </div>
+
+    <div class="ground-shadow"></div>
+  </div>
+
+  <!-- BOTTOM OVERLAPPING THUMBNAILS -->
+ 
+
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="projects" id="projects">
+  <div class="projects__container">
+
+    <!-- Section Header -->
+    <div class="projects__header">
+      <p class="projects__eyebrow">Selected Work</p>
+      <h2 class="projects__title">Projects that solve real problems.</h2>
+      <p class="projects__subtitle">
+        Full-stack applications, frontend experiences, and scalable products
+        built with clean architecture and polished user interfaces.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects__grid">
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-card__image-wrapper">
+          <img
+            src="https://ik.imagekit.io/sri05/heustttt.jpg?updatedAt=1759858469115"
+            alt="Fight Club"
+            class="project-card__image"
+          />
+        </div>
+
+        <div class="project-card__content">
+          <span class="project-card__tag">Full Stack</span>
+          <h3 class="project-card__title">Fight Club.</h3>
+          <p class="project-card__description">
+            A social productivity platform built for focused builders.
+          </p>
+          <a href="#" class="project-card__link">View Project →</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-card__image-wrapper">
+          <img
+            src="https://ik.imagekit.io/sri05/hero-background.jpg?updatedAt=1759569853299"
+            alt="Learning Management System"
+            class="project-card__image"
+          />
+        </div>
+
+        <div class="project-card__content">
+          <span class="project-card__tag">C# / OOP</span>
+          <h3 class="project-card__title">Learning Management System.</h3>
+          <p class="project-card__description">
+            Console-based LMS demonstrating SOLID principles and LINQ.
+          </p>
+          <a href="#" class="project-card__link">View Project →</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-card__image-wrapper">
+          <img
+            src="https://ik.imagekit.io/sri05/treasureimage.jpg?updatedAt=1758644717212"
+            alt="Portfolio Website"
+            class="project-card__image"
+          />
+        </div>
+
+        <div class="project-card__content">
+          <span class="project-card__tag">Frontend</span>
+          <h3 class="project-card__title">Portfolio Website.</h3>
+          <p class="project-card__description">
+            Minimal, responsive portfolio built with HTML, CSS, and JavaScript.
+          </p>
+          <a href="#" class="project-card__link">View Project →</a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card">
+        <div class="project-card__image-wrapper">
+          <img
+            src="https://ik.imagekit.io/sri05/imageidiendiendiee.png?updatedAt=1752043647570"
+            alt="Todo Management App"
+            class="project-card__image"
+          />
+        </div>
+
+        <div class="project-card__content">
+          <span class="project-card__tag">Backend</span>
+          <h3 class="project-card__title">Todo Management App.</h3>
+          <p class="project-card__description">
+            Task manager with filtering, tagging, and advanced LINQ queries.
+          </p>
+          <a href="#" class="project-card__link">View Project →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+
+
+<section class="about-components-section" style="background-color: whitesmoke">
+
+
+  <div class="tech-stack-module">
+    <p class="tsm__label">Tech Stack</p>
+    <div class="tsm__grid">
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />JavaScript</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS" />TypeScript</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />React</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />Next.js</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" />Node.js</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />Express.js</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="Mongo" />MongoDB</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PG" />PostgreSQL</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" />Tailwind CSS</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />Git &amp; GitHub</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />Docker</div>
+      <div class="tsm__pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />AWS</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       COMPONENT 2 — IN NUMBERS  (count-up animation on scroll)
+  ============================================================ -->
+  <div class="numbers-module" id="numbersModule">
+    <p class="nm__label">Things I Cooked</p>
+    <div class="nm__grid">
+      <div class="nm__card">
+        <span class="nm__value" data-target="15" data-suffix="+">0</span>
+        <span class="nm__desc">Projects<br />Completed</span>
+      </div>
+      <div class="nm__card">
+        <span class="nm__value" data-target="3" data-suffix="+">0</span>
+        <span class="nm__desc">Years of<br />Learning</span>
+      </div>
+      <div class="nm__card">
+        <span class="nm__value" data-target="1000" data-suffix="+">0</span>
+        <span class="nm__desc">Commits<br />Pushed</span>
+      </div>
+      <div class="nm__card">
+        <span class="nm__value" data-target="10" data-suffix="+">0</span>
+        <span class="nm__desc">Happy<br />Clients</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       COMPONENT 3 — WHAT I DO
+  ============================================================ -->
+  <div class="whatido-module">
+    <p class="wid__label">What I Do</p>
+    <div class="wid__list">
+      <div class="wid__item">
+        <span class="wid__dot"></span>
+        <div class="wid__text">
+          <h4>Full-Stack Development</h4>
+          <p>Building end-to-end web applications with modern technologies.</p>
+        </div>
+      </div>
+      <div class="wid__item">
+        <span class="wid__dot"></span>
+        <div class="wid__text">
+          <h4>Product Engineering</h4>
+          <p>Designing scalable architectures and robust backend systems.</p>
+        </div>
+      </div>
+      <div class="wid__item">
+        <span class="wid__dot"></span>
+        <div class="wid__text">
+          <h4>Clean UI / UX</h4>
+          <p>Crafting intuitive, accessible and delightful user experiences.</p>
+        </div>
+      </div>
+      <div class="wid__item">
+        <span class="wid__dot"></span>
+        <div class="wid__text">
+          <h4>Problem Solving</h4>
+          <p>Breaking down complex problems and building efficient solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       COMPONENT 4 — FIND ME ON
+  ============================================================ -->
+  <div class="findme-module">
+    <p class="fmo__label">Find Me On</p>
+    <div class="fmo__grid">
+
+      <a href="https://github.com" target="_blank" rel="noopener" class="fmo__link">
+        <span class="fmo__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </span>
+        <span class="fmo__name">GitHub</span>
+      </a>
+
+      <a href="https://linkedin.com" target="_blank" rel="noopener" class="fmo__link">
+        <span class="fmo__icon">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </span>
+        <span class="fmo__name">LinkedIn</span>
+      </a>
+
+    
+
+      <a href="mailto:hello@sriii.dev" class="fmo__link">
+        <span class="fmo__icon">
+          <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </span>
+        <span class="fmo__name">Email</span>
+      </a>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     COUNT-UP SCRIPT (Component 2)
+============================================================ -->
+<script>
+(function () {
+  function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  function countUp(el, target, suffix, duration) {
+    var start = performance.now();
+    function tick(now) {
+      var progress = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(easeOutQuart(progress) * target) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function fireAll(counters) {
+    counters.forEach(function (el) {
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      var duration = target >= 500 ? 2000 : 1400;
+      countUp(el, target, suffix, duration);
+    });
+  }
+
+  var module = document.getElementById('numbersModule');
+  if (!module) return;
+
+  var counters = module.querySelectorAll('[data-target]');
+  if (!counters.length) return;
+
+  var fired = false;
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !fired) {
+          fired = true;
+          fireAll(counters);
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    io.observe(module);
+  } else {
+    fireAll(counters);
+  }
+})();
+</script>
+
+<footer class="footer-section">
+  <div class="footer-container">
+
+    
+    <div class="footer-contact">
+
+     
+      <div class="fc-info">
+        <p class="fc-info__label">Get In Touch</p>
+        <h3>Let's build something <span>great together.</span></h3>
+        <p>Have a project in mind or just want to say hi for a Coffee? Fill in the form and I'll get back to you within 24 hours.</p>
+
+        <div class="fc-info__details">
+          <div class="fc-info__row">
+            <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+            <a href="mailto:hello@sriii.dev">srimctwork@gmail.com</a>
+          </div>
+          <div class="fc-info__row">
+            <svg viewBox="0 0 24 24"><path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+            Chennai, Tamil Nadu, India
+          </div>
+          <div class="fc-info__row">
+            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <a href="https://github.com/Srimc05" target="_blank" rel="noopener">github/Srimc05</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="fc-form" id="contactForm">
+
+        <div class="fc-form__row">
+          <div class="fc-field">
+            <label for="fc-name">Name</label>
+            <input type="text" id="fc-name" placeholder="Tyler Durden" autocomplete="name" />
+          </div>
+          <div class="fc-field">
+            <label for="fc-email">Email</label>
+            <input type="email" id="fc-email" placeholder="Marla@fightClub.com" autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="fc-field">
+          <label for="fc-subject">Subject</label>
+          <input type="text" id="fc-subject" placeholder="Project Inquiry / Collaboration / For a Coffee" />
+        </div>
+
+        <div class="fc-field">
+          <label for="fc-message">Message</label>
+          <textarea id="fc-message" placeholder="Tell me about your project or idea..."></textarea>
+        </div>
+
+        <div class="fc-success" id="fcSuccess">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Message sent! I'll get back to you within 24 hours.
+        </div>
+
+        <div class="fc-form__submit">
+          <span class="fc-form__note">I reply within 24 hours </span>
+          <button class="fc-btn-send" onclick="handleContactSubmit()">
+            Send Message
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ══ FOOTER TOP ══ -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Sri<span>.Developer</span></a>
+        <p class="footer-tagline">
+          Full-stack developer crafting clean, scalable web experiences.
+        </p>
+        <a href="mailto:hello@sriii.dev" class="footer-contact-pill">
+          <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          srimcatwork@gmail.com
+        </a>
+      </div>
+
+      <!-- Quick Links -->
+      <nav class="footer-nav">
+        <p class="footer-nav-label">Quick Links</p>
+        <a href="#about" >About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+     
+      <nav class="footer-nav">
+        <p class="footer-nav-label">Find Me On</p>
+        <a href="https://github.com/Srimc05" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="mailto:srimcatwork@gmail.com">Email</a>
+      </nav>
+
+    </div>
+
+    
+
+    <!-- ══ FOOTER BOTTOM ══ -->
+    <div class="footer-bottom">
+
+      <p class="footer-copyright">
+        &copy; 2025 <span>Sri</span>. Built with passion &amp; too much coffee.
+      </p>
+
+      
+
+      <!-- Back to top -->
+      <button class="footer-back-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Back to top">
+        <svg viewBox="0 0 24 24">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+
+    </div>
+
+  </div>
+</footer>
+
+<script>
+function handleContactSubmit() {
+  var name    = document.getElementById('fc-name').value.trim();
+  var email   = document.getElementById('fc-email').value.trim();
+  var message = document.getElementById('fc-message').value.trim();
+
+  if (!name || !email || !message) {
+    alert('Please fill in your name, email, and message.');
+    return;
+  }
+
+  var btn = document.querySelector('.fc-btn-send');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  setTimeout(function () {
+    document.getElementById('fcSuccess').classList.add('visible');
+    document.getElementById('fc-name').value    = '';
+    document.getElementById('fc-email').value   = '';
+    document.getElementById('fc-subject').value = '';
+    document.getElementById('fc-message').value = '';
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+  }, 1000);
+}
+</script>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
