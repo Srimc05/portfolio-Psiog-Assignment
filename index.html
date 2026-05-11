@@ -24,23 +24,17 @@
  
 <div id="sticky-banner" class="sticky-banner" role="banner" aria-label="Site announcement">
   <div class="sticky-banner__content">
-    <!-- Badge -->
-    <span class="sticky-banner__badge">
-      
 
-    <!-- Message -->
+    
     <p class="sticky-banner__text">
-         I Love Building <strong> Good Looking </strong>Application 
+      I Love Building <strong>Good Looking</strong> Applications
     </p>
 
-    <!-- Separator -->
     <span class="sticky-banner__separator" aria-hidden="true">•</span>
 
-    
-    
+
   </div>
 
-  <!-- Close Button -->
   <button
     class="sticky-banner__close"
     id="bannerCloseBtn"
@@ -50,84 +44,171 @@
   </button>
 </div>
 
+<script>
+  const bannerCloseBtn = document.getElementById("bannerCloseBtn");
+  const stickyBanner = document.getElementById("sticky-banner");
+
+  if (bannerCloseBtn && stickyBanner) {
+    bannerCloseBtn.addEventListener("click", () => {
+      stickyBanner.classList.add("hidden");
+      document.body.style.paddingTop = "0";
+    });
+  }
+</script>
+
   <!-- HERO SECTION -->
-  <section class="hero ">
-    
-    <!-- LEFT SIDEBAR -->
-    <aside class="hero__sidebar">
+<section class="hero">
 
-      <div class="sidebar__profile">
-        <img
-          src="https://ik.imagekit.io/sri05/gbiliddd.jpeg"
-          alt="Sriii"
-          class="sidebar__image"
-        />
-      </div>
+  <!-- LEFT SIDEBAR -->
+  <aside class="hero__sidebar">
 
-    <nav class="sidebar__nav">
-  <a href="#projects" class="nav-btn">
-    <span class="nav-btn__arrow">→</span>
-    <span class="nav-btn__text">Projects</span>
-  </a>
-
-  <a href="#about" class="nav-btn">
-    <span class="nav-btn__arrow">→</span>
-    <span class="nav-btn__text">About Me</span>
-  </a>
-
-  <a href="#footer-section" class="nav-btn">
-    <span class="nav-btn__arrow">→</span>
-    <span class="nav-btn__text">Contact Me</span>
-  </a>
-</nav>
-
-      <button class="sidebar__toggle" id="menuToggle" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="sidebar__nav sidebar__nav--mobile" id="mobileMenu">
-        <a href="#projects" class="sidebar__link">Projects</a>
-        <a href="#about" class="sidebar__link">About Me</a>
-        <a href="#contact" class="sidebar__link">Contact Me</a>
-      </nav>
-    </aside>
-
-    <!-- RIGHT CONTENT -->
-    <div class="hero__content-wrapper">
-      <div class="hero__content">
-
-        <div class="hero__line">
-          <span class="hero__number">01</span>
-          <span class="hero__tag">&lt;</span>
-          <h1 class="hero__title">
-            Hello, I'm <span class="hero__accent">Sriii</span>!
-          </h1>
-          <span class="hero__tag">&gt;</span>
-        </div>
-
-        <div class="hero__line">
-          <span class="hero__number">02</span>
-          <span class="hero__tag">&lt;</span>
-          <h2 class="hero__title">
-            I <span class="hero__accent">design</span> and
-            <span class="hero__accent">develop</span>
-          </h2>
-        </div>
-
-        <div class="hero__line">
-          <span class="hero__number">03</span>
-          <h2 class="hero__title hero__line--offset">web apps.</h2>
-          <span class="hero__tag">&gt;</span>
-        </div>
-
-       <p class="hero__subtitle">
-  <span id="typing-text"></span>
-</p>
-      </div>
+    <!-- Profile image (desktop only) -->
+    <div class="sidebar__profile">
+      <img
+        src="https://ik.imagekit.io/sri05/gbiliddd.jpeg"
+        alt="Sriii"
+        class="sidebar__image"
+      />
     </div>
-  </section>
+
+    <!-- Desktop nav buttons -->
+    <nav class="sidebar__nav" aria-label="Desktop navigation">
+      <a href="#projects" class="nav-btn">
+        <span class="nav-btn__arrow" aria-hidden="true">→</span>
+        <span class="nav-btn__text">Projects</span>
+      </a>
+      <a href="#about" class="nav-btn">
+        <span class="nav-btn__arrow" aria-hidden="true">→</span>
+        <span class="nav-btn__text">About Me</span>
+      </a>
+      <a href="#footer-section" class="nav-btn">
+        <span class="nav-btn__arrow" aria-hidden="true">→</span>
+        <span class="nav-btn__text">Contact Me</span>
+      </a>
+    </nav>
+
+    <!-- Hamburger (mobile only) -->
+    <button
+      class="sidebar__toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile dropdown nav -->
+    <nav
+      class="sidebar__nav sidebar__nav--mobile"
+      id="mobileMenu"
+      aria-label="Mobile navigation"
+    >
+      <a href="#projects" class="sidebar__link">Projects</a>
+      <a href="#about" class="sidebar__link">About Me</a>
+      <a href="#footer-section" class="sidebar__link">Contact Me</a>
+    </nav>
+
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+  <div class="hero__content-wrapper">
+    <div class="hero__content">
+
+      <div class="hero__line">
+        <span class="hero__number">01</span>
+        <span class="hero__tag">&lt;</span>
+        <h1 class="hero__title">
+          Hello, I'm <span class="hero__accent">Sriii</span>!
+        </h1>
+        <span class="hero__tag">&gt;</span>
+      </div>
+
+      <div class="hero__line">
+        <span class="hero__number">02</span>
+        <span class="hero__tag">&lt;</span>
+        <h2 class="hero__title">
+          I <span class="hero__accent">design</span> and
+          <span class="hero__accent">develop</span>
+        </h2>
+      </div>
+
+      <div class="hero__line hero__line--offset">
+        <span class="hero__number">03</span>
+        <h2 class="hero__title">web apps.</h2>
+        <span class="hero__tag">&gt;</span>
+      </div>
+
+      <p class="hero__subtitle">
+        <span id="typing-text"></span>
+      </p>
+
+    </div>
+  </div>
+
+</section>
+
+<script>
+  /* ── Mobile menu toggle ── */
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    /* Close menu when a link is tapped */
+    mobileMenu.querySelectorAll(".sidebar__link").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* ── Typing animation ── */
+  const phrases = [
+  "Building scalable products\nfrom idea to deployment",
+  "Crafting clean interfaces\nthat users genuinely enjoy"
+];
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingEl = document.getElementById("typing-text");
+
+  function type() {
+    if (!typingEl) return;
+
+    const current = phrases[phraseIndex];
+
+    if (isDeleting) {
+      typingEl.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingEl.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    if (!isDeleting && charIndex === current.length) {
+      setTimeout(() => { isDeleting = true; type(); }, 1800);
+      return;
+    }
+
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 90);
+  }
+
+  type();
+</script>
 
  <!-- ABOUT SECTION -->
 <section id="about" class="about-section">
@@ -165,11 +246,11 @@
 
       <!-- Buttons -->
       <div class="about-buttons">
-         <a href="#projects" class="nav-btn" >
+         <a href="#projects" class="nav-btnn" >
     <span class="nav-btn__arrow">→</span>
     <span class="nav-btn__text">View Projects</span>
   </a>
-   <a href="assets/srimcresume.pdf" class="nav-btn">
+   <a href="assets/srimcresume.pdf" class="nav-btnn">
     <span class="nav-btn__arrow">→</span>
     <span class="nav-btn__text">Get resume</span>
   </a>

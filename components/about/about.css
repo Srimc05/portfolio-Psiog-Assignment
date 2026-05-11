@@ -147,7 +147,38 @@
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
+.nav-btnn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0.8rem 1.4rem;
+  border: 1.5px solid #111;
+  border-radius: 14px;
+  background: white;
+  color: #111;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+  cursor: pointer;
+  min-width: 170px;
+}
 
+.nav-btnn:hover {
+  border-radius: 0;
+}
+
+.nav-btnn:hover .nav-btn__arrow {
+  width: 22px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-btnn:hover .nav-btn__text {
+  transform: translateX(8px);
+}
 .btn-primary {
   padding: 0.85rem 1.75rem;
   background: #1d22c2;

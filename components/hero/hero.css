@@ -1,7 +1,9 @@
 /* ========================================
    GLOBAL RESET
 ======================================== */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,14 +38,13 @@ body {
   padding: 3rem 2rem;
   border-right: 1px solid #dcdcdc;
   background: transparent;
-  opacity: 8;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Profile */
+/* ── Profile image ── */
 .sidebar__profile {
   width: 180px;
   height: 180px;
@@ -58,38 +59,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* ========================================
-   DESKTOP NAVIGATION
+   DESKTOP NAV BUTTONS
 ======================================== */
 .sidebar__nav {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.sidebar__link {
-  display: block;
-  padding: 1rem 1.25rem;
-  border-radius: 12px;
-  text-decoration: none;
-
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: #111;
-
-  transition: all 0.3s ease;
-}
-
-.sidebar__link:hover,
-.sidebar__link.active {
-  background: rgba(29, 34, 194, 0.08);
-  color: #1d22c2;
-}
-
-.sidebar__nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -105,18 +82,17 @@ body {
   background: white;
   color: #111;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
   overflow: hidden;
   transition: all 0.45s cubic-bezier(0.76, 0, 0.24, 1);
   cursor: pointer;
   min-width: 170px;
+  width: 100%;
 }
 
-
-
-/* hidden arrow */
+/* Hidden arrow — slides in on hover */
 .nav-btn__arrow {
   width: 0;
   opacity: 0;
@@ -128,12 +104,10 @@ body {
   align-items: center;
 }
 
-/* text animation */
 .nav-btn__text {
   transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-/* hover effect */
 .nav-btn:hover {
   border-radius: 0;
 }
@@ -147,8 +121,9 @@ body {
 .nav-btn:hover .nav-btn__text {
   transform: translateX(8px);
 }
+
 /* ========================================
-   HAMBURGER BUTTON
+   HAMBURGER BUTTON  (mobile only)
 ======================================== */
 .sidebar__toggle {
   display: none;
@@ -157,35 +132,11 @@ body {
   border: none;
   background: transparent;
   cursor: pointer;
-
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-}
-.hero__subtitle {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #1d22c2;
-  min-height: 2rem;
-}
-
-#typing-text::after {
-  content: "|";
-  display: inline-block;
-  margin-left: 4px;
-  animation: blink 0.7s infinite;
-  color: #1d22c2;
-}
-
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
+  flex-shrink: 0;
 }
 
 .sidebar__toggle span {
@@ -194,10 +145,22 @@ body {
   height: 2px;
   background: #111;
   border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate to X when open */
+.sidebar__toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.sidebar__toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.sidebar__toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ========================================
-   MOBILE DROPDOWN MENU
+   MOBILE DROPDOWN NAV
 ======================================== */
 .sidebar__nav--mobile {
   display: none;
@@ -220,13 +183,25 @@ body {
   display: flex;
 }
 
-.sidebar__nav--mobile .sidebar__link {
-  font-size: 1rem;
+.sidebar__link {
+  display: block;
   padding: 0.9rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.sidebar__link:hover,
+.sidebar__link.active {
+  background: rgba(29, 34, 194, 0.08);
+  color: #1d22c2;
 }
 
 /* ========================================
-   HERO CONTENT
+   HERO CONTENT (right panel)
 ======================================== */
 .hero__content-wrapper {
   display: flex;
@@ -256,7 +231,6 @@ body {
 .hero__number {
   width: 55px;
   flex-shrink: 0;
-
   font-size: 2rem;
   font-weight: 400;
   color: #8a8a8a;
@@ -264,7 +238,6 @@ body {
 
 .hero__tag {
   flex-shrink: 0;
-
   font-size: 4.25rem;
   line-height: 0.9;
   font-weight: 400;
@@ -287,11 +260,25 @@ body {
   margin-top: 4rem;
   margin-left: 5.5rem;
   max-width: 750px;
-
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.5;
   color: #222;
+  min-height: 2.5rem;
+}
+
+/* Typing cursor */
+#typing-text::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s infinite;
+  color: #1d22c2;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 /* ========================================
@@ -326,14 +313,11 @@ body {
     width: 150px;
     height: 150px;
   }
-
-  .sidebar__link {
-    font-size: 1.15rem;
-  }
 }
 
 /* ========================================
-   TABLET & SMALL LAPTOP (≤ 1024px)
+   TABLET / SMALL LAPTOP (≤ 1024px)
+   — sidebar becomes a top bar
 ======================================== */
 @media (max-width: 1024px) {
   .hero {
@@ -351,15 +335,16 @@ body {
     align-items: center;
   }
 
+  /* Hide profile image in top-bar mode */
   .sidebar__profile {
-    width: 70px;
-    height: 70px;
+    width: 56px;
+    height: 56px;
     margin-bottom: 0;
   }
 
-  /* Hide desktop nav */
+  /* Hide desktop nav-btn links */
   .sidebar__nav:not(.sidebar__nav--mobile) {
-    display: none;
+    display: none !important;
   }
 
   /* Show hamburger */
@@ -368,10 +353,9 @@ body {
   }
 
   .hero__content-wrapper {
-    padding: 3rem 2rem;
+    padding: 3rem 2.5rem;
   }
 
-  .hero__line,
   .hero__line--offset {
     padding-left: 0;
   }
@@ -391,9 +375,11 @@ body {
 
   .hero__subtitle {
     margin-left: 0;
-    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   }
 }
+
 /* ========================================
    MOBILE (≤ 768px)
 ======================================== */
@@ -403,70 +389,87 @@ body {
   }
 
   .sidebar__profile {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
 
   .hero__content-wrapper {
     padding: 2rem 1.25rem 3rem;
+    align-items: flex-start;
   }
 
   .hero__line {
     flex-wrap: wrap;
-    gap: 0.15rem 0.35rem;
-    margin-bottom: 1.25rem;
-  }
-
-  /* Hide 01, 02, 03 on mobile */
-  .hero__number {
-    display: none;
+    gap: 0.2rem 0.4rem;
+    margin-bottom: 1.1rem;
+    align-items: baseline;
   }
 
   .hero__line--offset {
     padding-left: 0;
   }
 
+  /* Hide 01 02 03 numbers */
+  .hero__number {
+    display: none;
+  }
+
   .hero__title {
-    font-size: clamp(2.1rem, 10vw, 4rem);
-    line-height: 1.05;
+    font-size: clamp(2rem, 9.5vw, 3.5rem);
+    line-height: 1.08;
     letter-spacing: -0.03em;
     word-break: keep-all;
   }
 
   .hero__tag {
-    font-size: clamp(1.4rem, 7vw, 2.4rem);
+    font-size: clamp(1.35rem, 6.5vw, 2.4rem);
   }
+ 
 
   .hero__subtitle {
-    margin-top: 2rem;
+    margin-top: 1.75rem;
     margin-left: 0;
     max-width: 100%;
-    font-size: clamp(1rem, 4vw, 1.25rem);
-    line-height: 1.7;
+    font-size: clamp(0.95rem, 3.8vw, 1.2rem);
+    line-height: 1.65;
+    font-weight: 500;
   }
 }
+
 /* ========================================
    SMALL MOBILE (≤ 480px)
 ======================================== */
 @media (max-width: 480px) {
+  .hero__sidebar {
+    padding: 0.85rem 1rem;
+  }
+
+  .sidebar__profile {
+    width: 40px;
+    height: 40px;
+  }
+
   .hero__content-wrapper {
-    padding: 1.75rem 1rem 2.5rem;
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .hero__line {
+    gap: 0.15rem 0.3rem;
+    margin-bottom: 0.9rem;
   }
 
   .hero__title {
-    font-size: clamp(1.85rem, 11vw, 3rem);
-    line-height: 1.08;
+    font-size: clamp(1.75rem, 10.5vw, 2.8rem);
+    line-height: 1.1;
   }
 
   .hero__tag {
-    font-size: clamp(1.2rem, 6vw, 1.9rem);
-  }
-
-  .hero__number {
-    font-size: 0.75rem;
+    font-size: clamp(1.15rem, 6vw, 1.8rem);
   }
 
   .hero__subtitle {
-    font-size: 0.95rem;
+    margin-top: 1.4rem;
+    font-size: clamp(0.88rem, 3.5vw, 1rem);
+    line-height: 1.6;
   }
 }
