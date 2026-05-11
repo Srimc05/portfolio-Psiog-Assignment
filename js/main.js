@@ -50,3 +50,18 @@ if (bannerCloseBtn && banner) {
     );
   });
 }
+
+const text = "I turn ambitious ideas into fast, clean, and scalable web applications.";
+const typingElement = document.getElementById("typing-text");
+
+let index = 0;
+
+function typeText() {
+  if (index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeText, 45); // typing speed
+  }
+}
+
+window.addEventListener("load", typeText);

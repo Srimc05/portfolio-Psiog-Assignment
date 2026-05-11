@@ -114,6 +114,8 @@ body {
   min-width: 170px;
 }
 
+
+
 /* hidden arrow */
 .nav-btn__arrow {
   width: 0;
@@ -159,6 +161,31 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
+}
+.hero__subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1d22c2;
+  min-height: 2rem;
+}
+
+#typing-text::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+  color: #1d22c2;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .sidebar__toggle span {
